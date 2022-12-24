@@ -1,8 +1,8 @@
 Demo of calling Dart asynchronously from Go goroutine.
 
 ```console
-$ go build -o godart.so -buildmode=c-shared
-$ dart godart.dart
+$ go build -o shared/godart.so -buildmode=c-shared
+$ dart run go_dart_ffi:main
 Go: Starting some asynchronous work
 Go: Returning to Dart
 GO: 2 seconds passed
