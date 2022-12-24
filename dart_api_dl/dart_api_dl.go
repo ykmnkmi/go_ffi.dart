@@ -13,8 +13,7 @@ import "unsafe"
 
 func Init(api unsafe.Pointer) {
 	if C.Dart_InitializeApiDL(api) != 0 {
-		panic("failed to initialize Dart DL C API: version mismatch. " +
-			"must update include/ to match Dart SDK version")
+		panic("failed to initialize Dart DL C API: version mismatch.")
 	}
 }
 
